@@ -77,7 +77,7 @@ If (!(Test-Path -Path "mpv.exe")) {
 Do {
 
     # Check for file and update
-    $pathtoshare = "C:\Users\rvanderwegen_og\Downloads\Big_Buck_Bunny_1080_10s_30MB.mp4"
+    $pathtoshare = "\\path\to\share\file.mp4"
     if (Test-Path $pathtoshare -NewerThan (Get-ChildItem ".\Master_video.mp4").LastWriteTime) {
         Write-Host "Downloading updated video..."
         Stop-Process -Name "MPV" # Stop MPV so we can restart it with the new video
